@@ -1,6 +1,6 @@
 # Libft 
 ## Overview
-The Libft project is a collection of useful C functions that you can use in your own projects. This library was created as part of the curriculum for the 42 coding school, and is used extensively in many of their subsequent projects.
+A personal C library implementation of commonly used functions, built from scratch as the foundational project of the 42 School curriculum.
 
 ## Functions
 The Libft library includes a wide range of functions, organized into several categories. Some of the key categories include:
