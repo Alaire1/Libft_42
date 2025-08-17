@@ -1,33 +1,98 @@
-# Libft 
-## Overview
-A personal C library implementation of commonly used functions, built from scratch as the foundational project of the 42 School curriculum.
+# ft_libft
 
-## Functions
-The Libft library includes a wide range of functions, organized into several categories. Some of the key categories include:
+**ft_libft** is a custom implementation of a subset of the C standard library functions.  
+This repository contains the **mandatory part only** (no bonus functions).
 
-### Memory Functions
-- ft_memset: Sets a block of memory to a specific value.
-- ft_bzero: Clears a block of memory to zero.
-- ft_memcpy: Copies a block of memory from one location to another.
-- ft_memccpy: Copies a block of memory from one location to another, stopping when a specific character is encountered.
-- ft_memmove: Copies a block of memory from one location to another, handling overlapping memory correctly.
+---
 
-### String Functions
-- ft_strlen: Returns the length of a string.
-- ft_strcpy: Copies a string from one location to another.
-- ft_strncpy: Copies a string from one location to another, with a specified length.
-- ft_strdup: Duplicates a string.
-- ft_strcat: Concatenates two strings.
-- ft_strncat: Concatenates two strings, with a specified length.
+## 📦 Description
 
-### Character Functions
-- ft_isalpha: Determines whether a character is a letter.
-- ft_isdigit: Determines whether a character is a digit.
-- ft_isalnum: Determines whether a character is alphanumeric.
-- ft_isascii: Determines whether a character is an ASCII character.
-- ft_isprint: Determines whether a character is printable.
+`libft` is a library created during the 42 school curriculum to:
 
-## Usage
-To use the Libft library in your own projects, you need to first compile it into a library file. To do this, navigate to the root directory of the project and run the make command. This will compile the library and generate a libft.a file.
+- Reimplement standard C library functions from scratch.
+- Practice memory management, pointer manipulation, and string handling.
+- Provide a personal reusable library for future projects.
 
+This version includes only the mandatory functions, which cover common operations on:
+
+- Strings
+- Memory
+- Characters
+- Output
+
+---
+
+## 🔹 Functions Implemented
+
+The following categories of functions are included:
+
+### **Character Checks**
+- `ft_isalpha` – check if a character is alphabetic
+- `ft_isdigit` – check if a character is a digit
+- `ft_isalnum` – check if a character is alphanumeric
+- `ft_isascii` – check if a character is an ASCII character
+- `ft_isprint` – check if a character is printable
+
+### **String and Memory**
+- `ft_strlen` – calculate the length of a string
+- `ft_memset` – fill a memory area with a constant byte
+- `ft_bzero` – set a memory area to zero
+- `ft_memcpy` – copy memory area
+- `ft_memmove` – copy memory safely, allowing overlapping
+- `ft_strlcpy` – copy string with size limit
+- `ft_strlcat` – concatenate strings with size limit
+- `ft_strchr` – locate first occurrence of a character in a string
+- `ft_strrchr` – locate last occurrence of a character
+- `ft_strncmp` – compare strings up to n characters
+- `ft_memchr` – locate byte in memory
+- `ft_memcmp` – compare memory areas
+- `ft_strnstr` – locate substring in a string
+
+### **Conversion**
+- `ft_atoi` – convert string to integer
+- `ft_tolower` – convert character to lowercase
+- `ft_toupper` – convert character to uppercase
+
+### **Memory Allocation**
+- `ft_calloc` – allocate memory and set it to zero
+- `ft_strdup` – duplicate a string
+
+---
+
+## ⚙️ Compilation
+
+To compile your library:
+```bash
+make
+```
+
+## 📝 Usage
+
+1. Include the header in your project:
+```
+#include "libft.h"
+```
+2. Link the library during compilation:
+```bash
+gcc main.c -L. -lft -o my_program
+```
+-  `L.` → library is in the current directory
+
+- `lft` → link libft.a
+
+## 🧪 Testing
+
+You can test each function by creating a main.c and compiling it with libft.a.
+Example of a `main.c`:
+```C
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+    char str[] = "Hello, world!";
+    printf("%zu\n", ft_strlen(str));
+    return 0;
+}
+```
 
